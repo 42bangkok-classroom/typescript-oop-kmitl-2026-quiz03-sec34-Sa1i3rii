@@ -1,15 +1,20 @@
-import { Car } from "./car";
+export class Car {
+  brand!: string;
+  model!: string;
 
-const car = new Car();
+  start(): void {
+    console.log(`${this.brand} ${this.model} is starting...`);
+  }
 
-car.brand = "Toyota";
-car.model = "Camry";
+  accelerate(): void {
+    console.log(`${this.brand} ${this.model} is accelerating...`);
+  }
 
-car.start();
-// Toyota Camry is starting...
-car.accelerate();
-// Toyota Camry is accelerating...
-car.brake();
-// Toyota Camry is braking...
-car.stop();
-// Toyota Camry is stopping...
+  brake(): void {
+    console.log(`${this.brand} ${this.model} is braking...`);
+  }
+
+  stop(): void {
+    console.log(`${this.brand} ${this.model} is stopping...`);
+  }
+}
